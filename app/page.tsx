@@ -1,14 +1,7 @@
 import { useEffect } from 'react';
 import React from 'react';
 import Myimage from '../public/cricket.jpg';
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card"
+
 import Venue from './venues/venue';
 
 
@@ -43,10 +36,6 @@ const Home: React.FC = () => {
             <Venue title="XYZ"/>
           </div>
           </section>
-
-        
-
-       
       </main>
     </div>
   );
