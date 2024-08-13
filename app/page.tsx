@@ -32,8 +32,8 @@ const Home: React.FC = () => {
           <section className="sticky top-0 w-full h-screen bg-white">
           <div className="flex z-20 sticky top-0 w-full h-screen space-x-6">
             
-            <Venue title="ABC"/>
-            <Venue title="XYZ"/>
+            <Venue title="ABC" location="Mumbai Maharashtra"/>
+            <Venue title="XYZ" location="Vadoadra Gujrat"/>
           </div>
           </section>
       </main>

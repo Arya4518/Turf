@@ -9,7 +9,7 @@ export default function Venue(props:any){
       <Image src={turfimg} alt='turf' className='rounded-lg'/>
       <div className='flex flex-row items-center justify-between w-full'> 
       <div className='text-lg font-bold'>{props.title}</div>
-      <div className='text-[12px]'>Mumbai,Maharashtra</div></div>
+      <div className='text-[12px]'>{props.location}</div></div>
       
       
    
