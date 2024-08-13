@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import React from 'react';
 import Myimage from '../public/cricket.jpg';
 
-import Venue from './venues/venue';
+import Venue from './components/venue';
 
 
 const Home: React.FC = () => {
