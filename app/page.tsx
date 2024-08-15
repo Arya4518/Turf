@@ -34,6 +34,7 @@ const Home: React.FC = () => {
             
             <Venue title="ABC" location="Mumbai Maharashtra"/>
             <Venue title="XYZ" location="Vadoadra Gujrat"/>
+            <a href="turf" className="text-gray-600">turf</a>
           </div>
           </section>
       </main>
