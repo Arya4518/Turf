@@ -45,8 +45,15 @@ const Home: React.FC = () => {
         </section>
         <section className="sticky top-0 w-full h-screen bg-white">
           <div className="flex z-20 sticky top-0 w-full h-screen space-x-6">
+<<<<<<< HEAD
             <VenueList/>
             <a href="/venues/turf" className="text-gray-600">turfimg</a>
+=======
+            
+            <Venue title="ABC" location="Mumbai Maharashtra"/>
+            <Venue title="XYZ" location="Vadoadra Gujrat"/>
+            <a href="turf" className="text-gray-600">turf</a>
+>>>>>>> 5f8147ad8c0b196db1283a8d9f1b59c80204468a
           </div>
         </section>
       </main>
