@@ -1,0 +1,104 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userId       Int      @id @default(autoincrement())
+  username     String   @unique
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+
+  // Relations
+
+  bookings Booking[]
+  reviews  Review[]
+
+  @@map("users")
+}
+
+model Owner {
+  ownerId Int    @id
+  name    String
+  turfs   Turf[] @relation("OwnerTurf")
+
+  @@map("owners")
+}
+
+model Admin {
+  adminId Int  @id
+  role    Role @default(admin)
+
+  @@map("admins")
+}
+
+model Turf {
+  turfId       Int     @id @default(autoincrement())
+  ownerId      Int
+  name         String
+  location     String
+  description  String?
+  pricePerHour Float
+  availability Boolean @default(true)
+
+  // Relations
+  owner    Owner     @relation("OwnerTurf", fields: [ownerId], references: [ownerId])
+  bookings Booking[]
+  reviews  Review[]
+
+  @@map("turfs")
+}
+
+model Booking {
+  bookingId   Int           @id @default(autoincrement())
+  turfId      Int
+  userId      Int
+  bookingDate DateTime
+  startTime   DateTime
+  endTime     DateTime
+  totalPrice  Float
+  status      BookingStatus
+
+  // Relations
+  turf Turf @relation(fields: [turfId], references: [turfId])
+  user User @relation(fields: [userId], references: [userId])
+
+  @@map("bookings")
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  turfId    Int
+  userId    Int
+  rating    Int
+  comment   String?
+  createdAt DateTime @default(now())
+
+  // Relations
+  turf Turf @relation(fields: [turfId], references: [turfId])
+  user User @relation(fields: [userId], references: [userId])
+
+  @@map("reviews")
+}
+
+enum Role {
+  user
+  admin
+}
+
+enum BookingStatus {
+  confirmed
+  pending
+  cancelled
+}

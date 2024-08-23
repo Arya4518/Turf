@@ -1,18 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-const navbarr = () => {
+const Navbar: React.FC = () => {
   return (
-    <div>      
-        <header className="flex justify-between items-center p-6 bg-white shadow-sm">
+    <nav className="bg-gray-800 text-white p-4 fixed z-50 w-full">
+    <div className="flex justify-between items-center max-w-screen-xl mx-auto">
+    <div className="text-2xl font-bold">BOOKNOW</div>
+    <div className="space-x-6">
+      <a href="/about" className="hover:underline">About</a>
+      <a href="/venues" className="hover:underline">Book</a>
+      <a href="/login" className="hover:underline">Login / Signup</a>
+    </div>
+  </div>
+</nav>
 
-    <div className="text-2xl font-bold text-green-600">PLAYO</div>
-    <nav className="flex space-x-6">
-      <a href="about" className="text-gray-600">About</a>
-      <a href="/venues" className="text-gray-600">Book</a>
-      <a href="#" className="text-gray-600">Login / Signup</a>
-    </nav>
-  </header></div>
-  )
-}
+  );
+};
 
-export default navbarr
+export default Navbar;
