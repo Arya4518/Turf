@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-export  function Navbar () {
+function Navbar () {
   return (
     <nav className="bg-gray-800 text-white p-4 fixed z-50 w-full">
     <div className="flex justify-between items-center max-w-screen-xl mx-auto">
