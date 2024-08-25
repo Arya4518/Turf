@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navbar: React.FC = () => {
+export default function Navbar () {
   return (
     <nav className="bg-gray-800 text-white p-4 fixed z-50 w-full">
     <div className="flex justify-between items-center max-w-screen-xl mx-auto">
@@ -16,4 +16,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
+
