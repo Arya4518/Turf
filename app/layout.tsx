@@ -4,7 +4,7 @@ import "./globals.css";
 
 function Navbar () {
   return (
-    <nav className="bg-gray-800 text-white p-4 fixed z-50 w-full">
+    <nav className="bg-gray-50 text-black p-4 fixed z-50 w-full">
     <div className="flex justify-between items-center max-w-screen-xl mx-auto">
     <div className="text-2xl font-bold">BOOKNOW</div>
     <div className="space-x-6">
@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main>{children}</main> {/* Wrap children in a main tag */}
+        <main className="pt-16">{children}</main> {/* Wrap children in a main tag */}
       </body>
     </html>
   );

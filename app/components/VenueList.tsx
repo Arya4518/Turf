@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Venue from './VenueCards';
+import VenueCards from './VenueCards'; // Ensure correct import path
 
 interface Turf {
+  turfId: number; // Include turfId
   name: string;
-  location: string;
+  city: string;
+  pricePerHour: string;
 }
 
 const VenueList: React.FC = () => {
@@ -28,8 +30,14 @@ const VenueList: React.FC = () => {
 
   return (
     <div className="flex flex-wrap">
-      {turfs.map((turf, index) => (
-        <Venue key={index} title={turf.name} location={turf.location} />
+      {turfs.map((turf) => (
+        <VenueCards
+          key={turf.turfId} // Use turfId as the key
+          turfId={turf.turfId} // Pass turfId to VenueCards
+          title={turf.name}
+          location={turf.city}
+          price={turf.pricePerHour}
+        />
       ))}
     </div>
   );

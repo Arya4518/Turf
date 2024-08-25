@@ -1,21 +1,13 @@
-import React from 'react';
-import ImageSlider from '../components/ImageSlider';
+import React from 'react'
 
-const BookNow: React.FC = () => {
+const BookNow = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
-    <div className="absolute top-2 left-2">
-    <ImageSlider/>
-    <button className="bg-white rounded-full p-2 shadow">
- 
-    </button>
-    </div>
-    <div className="absolute top-2 right-2">
-    <button className="bg-white rounded-full p-2 shadow">
-    </button>
-    </div>
-    </div>
-  );
-};
+    <div className="my-4">
+              <button className="bg-green-500 text-white px-4 py-2 rounded">
+                Book Now
+              </button>
+            </div>
+  )
+}
 
-export default BookNow;
+export default BookNow

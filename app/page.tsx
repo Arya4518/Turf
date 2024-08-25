@@ -46,7 +46,7 @@ const Home: React.FC = () => {
         <section className="sticky top-0 w-full h-screen bg-white">
           <div className="flex z-20 sticky top-0 w-full h-screen space-x-6">
             <VenueList/>
-            <a href="/venues/turf" className="text-gray-600">turfimg</a>
+            
           </div>
         </section>
       </main>

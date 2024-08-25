@@ -42,6 +42,9 @@ model Turf {
   description  String?   @db.Text
   pricePerHour Float
   availability Boolean   @default(true)
+  state        String?   @db.Text
+  city         String?   @db.Text
+  timing       String?   @db.Text
   bookings     Booking[]
   reviews      Review[]
   owner        Owner     @relation("OwnerTurf", fields: [ownerId], references: [ownerId])
