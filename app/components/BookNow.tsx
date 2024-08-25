@@ -7,12 +7,11 @@ const BookNow: React.FC = () => {
     <div className="absolute top-2 left-2">
     <ImageSlider/>
     <button className="bg-white rounded-full p-2 shadow">
-                {/* Previous Button Icon */}
+ 
     </button>
     </div>
     <div className="absolute top-2 right-2">
     <button className="bg-white rounded-full p-2 shadow">
-    {/* Next Button Icon */}
     </button>
     </div>
     </div>
